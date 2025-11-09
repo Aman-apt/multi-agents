@@ -1,0 +1,1 @@
+This is a Simple research agent with different Parts running toghether to complete a given task . We have many different agents runnig in parallel to complete a task . 
