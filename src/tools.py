@@ -5,7 +5,6 @@ from typing import Annotated, List, Dict, Optional, TypedDict
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_tavily import TavilySearch
 from langchain_core.tools import tool
-from langchain_experimental.utilities import PythonREPL
 
 
 _TEMP_DIRECTORY = TemporaryDirectory()
@@ -44,7 +43,7 @@ def create_outline(
 
 
 @tool
-def read_documents(
+def read_document(
     file_name: Annotated[str, "File path to read the documents froms"],
     start: Annotated[Optional[int], "The start line. Default is 0"] = None,
     end: Annotated[Optional[int], "The end line. Default i None"] = None,
@@ -57,7 +56,7 @@ def read_documents(
     return "\n".join(lines[start:end])
 
 @tool
-def write_documents(
+def write_document(
     file_name: Annotated[str, "File path to write the documents"],
     content: Annotated[str, "Text content to be written into documnets"],
 ) -> Annotated[str, "Path of saved documents"]:
@@ -93,7 +92,6 @@ def edit_document(
     return f"Document edited and saved to {file_name}"
 
 
-repl = PythonREPL()
 
 @tool
 def python_repl_tool(code: str) -> str:
