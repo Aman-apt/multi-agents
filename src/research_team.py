@@ -43,7 +43,7 @@ def web_scraper_node(state: State) -> Command[Literal["supervisor"]]:
 research_supervisor_node = make_supervisor_node(llm, ["search", "web_scraper"])
 
 
-# Let's build the graph and connect the Nodes 
+# Let's build the graph  and connect the Nodes 
 
 research_builder = StateGraph(State)
 research_builder.add_node("supervisor", research_supervisor_node)
