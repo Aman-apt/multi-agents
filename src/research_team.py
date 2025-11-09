@@ -57,3 +57,13 @@ research_graph = research_builder.compile()
 from IPython.display import Image, display
 
 display(Image(research_graph.get_graph().draw_mermaid_png()))
+
+
+
+for s in research_graph.stream(
+    {"messages": [("user", "when is Taylor Swift's next tour?")]},
+    {"recursion_limit": 100},
+):
+    print(s)
+    print("---")
+

@@ -1,3 +1,4 @@
+import io, contextlib
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from typing import Annotated, List, Dict, Optional, TypedDict
@@ -95,12 +96,13 @@ def edit_document(
 repl = PythonREPL()
 
 @tool
-def python_repl_tool(
-    code: Annotated[str, "The python code to execute to generate your chart"],
-):
-    """Use this to excute python code"""
+def python_repl_tool(code: str) -> str:
+    """Execute Python code and return the output."""
+    stdout = io.StringIO()
     try:
-        result = repl.run(code)
-    except BaseException as e:
-        return f"Failed to exctue. Error: {repr(e)}"
-    return f"Successfully executed:\n```python\n{code}\n```\nStdout: {result}"
+        with contextlib.redirect_stdout(stdout):
+            exec(code, {})
+        result = stdout.getvalue()
+    except Exception as e:
+        result = f"Error: {e}"
+    return f"Output:\n{result or '(no output)'}"
