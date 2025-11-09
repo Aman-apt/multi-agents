@@ -15,14 +15,16 @@ The system consists of three main graphs (or teams), each handling a distinct st
 📊 Helps perform research and scrape web pages.  
 This team contains multiple nodes responsible for collecting and processing data from online sources.
 
-![Research Team Graph](./first_graph.png)
+<img width="397" height="249" alt="first_graph" src="https://github.com/user-attachments/assets/04eb72ee-0aa8-4f91-8827-754722881a04" />
+
 
 ---
 
 ### **2. Documentation Team**
 📝 Focuses on writing, editing, and updating documentation based on the supervisor’s input, which originates from the research team’s findings.
 
-![Documentation Team Graph](./lang.png)
+<img width="612" height="249" alt="lang" src="https://github.com/user-attachments/assets/ff8f423b-fe7a-4c59-aa49-af4a760068a5" />
+
 
 ---
 
@@ -30,7 +32,8 @@ This team contains multiple nodes responsible for collecting and processing data
 🧩 Manages and coordinates the entire workflow.  
 The supervisor combines all nodes and organizes them into two logical teams that work together efficiently to complete the overall task.
 
-![Supervisor Graph](./new_lang.png)
+<img width="462" height="249" alt="new_lang" src="https://github.com/user-attachments/assets/e3a72d65-6a2c-4cbf-bbf4-4ab866fd22ea" />
+
 
 ---
 Thank's for your visit. In future i will be building more useful and complex projects.
