@@ -1,18 +1,36 @@
-This is a Simple research agent with different Parts running toghether to complete a given task . We have many different agents runnig in parallel to complete a task . 
+# 🧠 Research Agent System
 
+This project demonstrates a **simple research agent architecture** composed of multiple interconnected parts working together to complete a given task.  
+Several specialized agents run **in parallel**, each focusing on a specific responsibility within the workflow.
 
-#FIRST GRAPH
-This is the Research team with different nodes, which helps to do research and scrape the web pages.
-![Alt text](home/aman/Downloads/first_graph.png)
+---
 
-#SECOND GRAPH
-Helps to write the docs, edit and update the docs based on the given input fromt the supervisor taken from research team
-![Alt text](home/aman/Downloads/lang.png)
+## 🔹 Overview
 
-#FINAL GRAPH
-The supervisor manages the whole worksflow by combining all the nodes in to two different teams which makes sense.
-![Alt text](home/aman/Downloads/new_lang.png)
+The system consists of three main graphs (or teams), each handling a distinct stage of the process:
 
+---
 
-This was fairly simple project, I will tryin to build more useful and complex project than this .
-Thank you ....
+### **1. Research Team**
+📊 Helps perform research and scrape web pages.  
+This team contains multiple nodes responsible for collecting and processing data from online sources.
+
+![Research Team Graph](./first_graph.png)
+
+---
+
+### **2. Documentation Team**
+📝 Focuses on writing, editing, and updating documentation based on the supervisor’s input, which originates from the research team’s findings.
+
+![Documentation Team Graph](./lang.png)
+
+---
+
+### **3. Supervisor (Final Graph)**
+🧩 Manages and coordinates the entire workflow.  
+The supervisor combines all nodes and organizes them into two logical teams that work together efficiently to complete the overall task.
+
+![Supervisor Graph](./new_lang.png)
+
+---
+Thank's for your visit. In future i will be building more useful and complex projects.
